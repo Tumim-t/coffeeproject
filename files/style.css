@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.cover{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: cornsilk;
+}
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button {
+    width: 200px;
+    padding: 15px 0;
+    background: #094914;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #065e15;
+     color: rgb(246, 248, 247) ;
+    cursor: pointer;
+}
+button:hover{
+    background: transparent;
+    border: 4px solid rgb(4, 39, 4);
+    cursor: pointer;
+}
+.about {
+    width: 100%;
+    padding: 78px 0;
+    background-color: antiquewhite;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1130px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+#img2 {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    width: 420px; 
+    mix-blend-mode: multiply;
+   
+}
+
+.about-text {
+    flex: 1; 
+    padding: 0 20px; 
+    text-align: left;
+}
+
+.about-text h1 {
+    color: rgb(29, 3, 3);
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.6;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+span{
+color: #0f561b;
+}
+
+
+
+
+
+
+
+.about-text button {
+    background-color: #094914;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about-text button:hover {
+    background-color: #072f0e;
+}
+
+.about button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+
+    cursor: pointer;
+    background: #258034;
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+.about button:hover{
+    background: transparent;
+    border: 2px solid rgb(4, 39, 4);
+}
+#moreContent {
+    display: none;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #261a12;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #044d08;
+    background-color: rgb(251, 253, 251);
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #044d08;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4e1919;
+}
+#cart {
+    margin-top: 2rem;
+    color: white;
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+#cartItems li {
+    margin: 0.5rem 0;
+    color: white;
+}
+
+#total {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: white;
+}
+#contact {
+    text-align: center;
+    vertical-align:middle;
+    height: 800px;
+    width:100%;
+    background-color: antiquewhite;
+    color: #0d360d;
+}
+
+
+
+
+
+
+
+
