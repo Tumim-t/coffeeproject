@@ -103,5 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         ?>
     </table>
+    <a href="adminlogout.php">logout</a>
+
 </body>
 </html>

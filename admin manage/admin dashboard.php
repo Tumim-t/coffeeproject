@@ -26,6 +26,7 @@ $username = $_SESSION['username'];
         <li><a href="manage contact.php">Manage Contact Information</a></li>
         <li><a href="manage about.php">Manage About Us</a></li>
     </ul>
+    <a href="adminlogout.php">logout</a>
 
    
 </body>

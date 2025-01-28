@@ -1,3 +1,4 @@
+
 <?php
 include '../database.php'; 
 $c = new db();
@@ -92,5 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         ?>
     </table>
+    <a href="adminlogout.php">logout</a>
+
 </body>
 </html>
