@@ -47,8 +47,8 @@ $result = $obj->conn()->query("SELECT * FROM PRODUCTS");
     <h2>Shopping Cart</h2>
     <ul id="cartItems">
     <?php
-    session_start(); // Start the session
-    $userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null; // Retrieve user_id from session
+    session_start(); 
+    $userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null; 
 
 
     if (!isset($_SESSION['cart'][$userId])) {
@@ -56,26 +56,38 @@ $result = $obj->conn()->query("SELECT * FROM PRODUCTS");
     }
 
 
-    if ($userId && !empty($_SESSION['cart'][$userId])) {
-        $total = 0;
-        foreach ($_SESSION['cart'][$userId] as $cartItem) {
-            $price = is_numeric($cartItem['price']) ? (int)$cartItem['price'] : 0; 
-            $quantity = is_numeric($cartItem['quantity']) ? (int)$cartItem['quantity'] : 0;
+if (!isset($_SESSION['cart'][$userId])) {
+    $_SESSION['cart'][$userId] = [];
+}
 
-            
-            $itemTotal = $price * $quantity;
-            $total += $itemTotal;
+if ($userId && !empty($_SESSION['cart'][$userId])) {
+    $total = 0;
+    foreach ($_SESSION['cart'][$userId] as $cartItem) {
+        $price = (int)$cartItem['price']; 
+        $quantity = (int)$cartItem['quantity'];  
 
-            echo "<li>{$cartItem['name']} ({$quantity} x $" . number_format($price, 2) . ")</li>";
-        }
-        echo "<p id='total'>Total: $" . number_format($total, 2) . "</p>";
-    } else {
-        echo "<p>Your cart is empty.</p>"; 
+        $itemTotal = $price * $quantity;
+        $total += $itemTotal;
+
+        echo "<li>{$cartItem['name']} ({$quantity} x $" . number_format($price, 2) . ")</li>";
     }
+    echo "<p id='total'>Total: $" . number_format($total, 2) . "</p>";
+} else {
+    echo "<p>Your cart is empty.</p>";
+}
+
+
     ?>
 </ul>
 
+<?php
 
+if (isset($_SESSION['cart'][$userId]) && !empty($_SESSION['cart'][$userId])) {
+    echo '<form method="POST" action="checkout.php">';
+    echo '<button type="submit"> Checkout</button>';
+    echo '</form>';
+}
+?>
 
 </section>
 
